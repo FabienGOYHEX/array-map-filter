@@ -23,8 +23,27 @@ Sortie attendue:
 ['Bordeaux', 'Lille', 'Marseille', 'Reims', 'Toulouse']
 
 */
+let enter =
+[
+  { city: 'Bordeaux', curriculums: ['PHP/Symfony', 'JS/React'] },
+  { city: 'La Loupe', curriculums: ['JS/Angular'] },
+  { city: 'Lille', curriculums: ['PHP/Symfony', 'JS/React'] },
+  { city: 'Marseille', curriculums: ['JS/React'] },
+  { city: 'Orléans', curriculums: ['PHP/Symfony'] },
+  { city: 'Reims', curriculums: ['JS/React'] },
+  { city: 'Toulouse', curriculums: ['JEE/Android', 'JS/React'] }
+]
 
 function getCampusesTeachingReact(campuses) {
-}
 
+return campuses.filter(function(good){
+  if (Object.values(good)[1].includes('JS/React')){
+  return true
+}
+  return false
+}).map(function(good){
+  return good.city
+ })
+}
+console.log(getCampusesTeachingReact(enter))
 module.exports = getCampusesTeachingReact;

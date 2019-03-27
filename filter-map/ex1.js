@@ -32,10 +32,13 @@ const enter = [
 
 
 function getJedisNames(characters) {
-  return characters.map(function(good){
-    if (good.side === 'light'){
-      return good.name
-   }
+  return characters.filter(function(good){
+    if (Object.values(good)[1].includes('light')){
+    return true
+  }
+    return false
+}).map(function(good){
+    return good.name
    })
 }
 console.log(getJedisNames(enter))

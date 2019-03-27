@@ -66,7 +66,7 @@ function getFoodCategories(foods){
      if(veget.isVegetarian === true) {
       return (`${ veget.food} is suitable for vegetarians`)
      }else {
-      return (`${ veget.food} is suitable for vegetarians`)
+      return (`${ veget.food} is not suitable for vegetarians`)
      }
   })
 }
