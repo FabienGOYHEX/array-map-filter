@@ -50,11 +50,19 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
   }
 ]
 */
+let enter = [1, 3, 4.5, 7]
 
 function getCirclesProperties(radiuses) {
+  return radiuses.map(function(rayon){
+    return{
+      radius :rayon,
+      circumference : ((2 * Math.PI * rayon).toFixed(3)),
+      surface : ((Math.PI * rayon * rayon).toFixed(3))
+  }
+  })
 }
 
 
-
+console.log(getCirclesProperties(enter))
 // Ne pas modifier l'export
 module.exports = getCirclesProperties;
