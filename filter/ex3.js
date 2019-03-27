@@ -21,10 +21,22 @@ Exemple d'entrée:
 Sortie attendue:
   ['Bran Stark', 'Arya Stark', 'Sansa Stark']
 
- */
+ 
+const allNames =[
+  'Bran Stark',
+  'Cersei Lannister',
+  'Sandor Clegane',
+  'Arya Stark',
+  'Yara Greyjoy',
+  'Sansa Stark'
+]*/
 
 function keepStarks(names) {
+  return names.filter(function(x){
+    return x.endsWith("Stark")
+  })
 }
+//console.log(keepStarks(allNames))
 
 // Ne pas modifier l'export
 module.exports = keepStarks;

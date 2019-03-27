@@ -6,17 +6,17 @@ Ecrire une fonction getMultiplesOf qui reçoit deux arguments:
 En utilisant filter, elle doit renvoyer un tableau ne contenant que les
 nombres du 1er argument qui sont multiples du nombre passé en 2ème.
 
-Exemple d'entrée:
-  1er argument:  [-12, -10, -7, -1, 5, 8, 11, 15, 20, 27]
-  2ème argument: 5
+Exemple d'entrée: 
+Sortie attendue:
+  [-10, 5, 15, 20]*/
+  const argument1=[-12, -10, -7, -1, 5, 8, 11, 15, 20, 27]
+  const argument2 =5
 
-  Sortie attendue:
-  [-10, 5, 15, 20]
-
- */
-
-function getMultiplesOf(numbers, n) {
+  function getMultiplesOf(numbers, n) {
+    return numbers.filter(function(x){
+      return x % n === 0
+    })
 }
-
+console.log(getMultiplesOf(argument1,argument2))
 // Ne pas modifier l'export
 module.exports = getMultiplesOf;

@@ -16,7 +16,7 @@ Exemple d'entrée:
   "Which one is better, React or Angular?",
   'There is no "better", it depends on your use case, DAMN YOU'
 ]
-2. mots à bannir: ['bloody', 'damn']
+2. const motsInterdits = ['bloody', 'damn']
 
 Sortie attendue:
 [
@@ -24,10 +24,25 @@ Sortie attendue:
   "Which one is better, React or Angular?",
 ]
 
+
 */
+const commentaires = [
+  "Very useful tutorial, thank you so much!",
+  "React is not a damn framework, it's a LIBRARY",
+  "Why you put bloody kitten pictures in a tech tutorial is beyond me!",
+  "Which one is better, React or Angular?",
+  'There is no "better", it depends on your use case, DAMN YOU'
+]
+
 
 function filterOffensiveComments(comments, bannedWords) {
+  return comments.filter(function(x){
+    if ((x.toLowerCase().includes(bannedWords[0]) || x.toLowerCase().includes(bannedWords[1])) === false){
+    return x}
+    })
 }
 
+
+console.log(filterOffensiveComments(commentaires, ["bloody", "damn"]))
 // Ne pas modifier l'export
 module.exports = filterOffensiveComments;
