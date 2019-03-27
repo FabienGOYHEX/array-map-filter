@@ -21,7 +21,10 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
+function getStringsLength(string) {
+  return string.map(function (x){
+    return x.length
+  })
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
