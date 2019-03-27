@@ -20,12 +20,14 @@ En sortie: [
 ]
 
  */
+const enter =['Chicken','Bacon','Tofu','Mayonnaise']
 
 function getStringsLength(string) {
   return string.map(function (x){
-    return x.length
+    return (`${x} contains ${x.length} characters`)
   })
 }
+console.log(getStringsLength(enter))
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
